@@ -1,4 +1,4 @@
-FROM golang:1.13-alpine
+FROM golang:1.14.3-alpine
 LABEL maintainer="Nikscorp <voynov@nikscorp.com>"
 
 ENV \
