@@ -1,4 +1,4 @@
-FROM golang:1.15.6-alpine
+FROM golang:1.18.2-alpine
 LABEL maintainer="Nikscorp <voynov@nikscorp.com>"
 
 ENV \
@@ -6,5 +6,5 @@ ENV \
     GOOS=linux \
     GOARCH=amd64
 
-RUN wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin -d v1.32.2
+RUN wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin -d v1.46.2
 RUN golangci-lint --version
