@@ -8,3 +8,5 @@ ENV \
 
 RUN wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin -d v1.48.0
 RUN golangci-lint --version
+
+RUN go install golang.org/x/perf/cmd/benchstat@latest
