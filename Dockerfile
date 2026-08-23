@@ -7,7 +7,7 @@ ENV \
     GOARCH=amd64
 
 RUN apk add git
-RUN wget -O- -nv https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin -d v2.12.2
+RUN go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.12.2
 RUN golangci-lint --version
 
 RUN go install golang.org/x/perf/cmd/benchstat@latest
